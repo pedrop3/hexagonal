@@ -10,7 +10,7 @@ import br.com.learn.hexagonal.adapters.out.client.response.AddressResponse;
     name = "FindAddressByZipCode",
     url = "${api-address.client.address.url}"
 )
-public interface FindAddressByZipCode {
+public interface FindAddressByZipCodeClient {
 
     @GetMapping("/{zipCode}")
     AddressResponse find(@PathVariable("zipCode") String zipCode);
