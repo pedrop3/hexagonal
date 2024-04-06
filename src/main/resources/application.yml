@@ -1,0 +1,4 @@
+api-address:
+    client:
+        address:
+            url: http://localhost:8002/addresses
