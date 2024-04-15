@@ -21,7 +21,7 @@ public class InsertCustomerUseCase implements InsertCustomerInputPort{
         this.insertCustomerOutputPort = insertCustomerOutputPort;
     }
 
-    @Autowired
+    @Override
     public void insert(Customer customer, String zipCode) {
 
         /**
