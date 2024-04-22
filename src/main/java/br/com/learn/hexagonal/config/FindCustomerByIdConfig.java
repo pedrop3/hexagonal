@@ -10,7 +10,7 @@ import br.com.learn.hexagonal.application.core.usercase.FindCustomerByIdUseCase;
 public class FindCustomerByIdConfig {
 
     @Bean
-    public FindCustomerByIdUseCase insertCustomerUseCase(FindCustomerByIdAdapter findCustomerByIdAdapter) {
+    public FindCustomerByIdUseCase findCustomerByIdUseCase(FindCustomerByIdAdapter findCustomerByIdAdapter) {
         return new FindCustomerByIdUseCase(findCustomerByIdAdapter);
     }
 
