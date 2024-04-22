@@ -1,14 +1,11 @@
 package br.com.learn.hexagonal.application.core.usercase;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-
 import br.com.learn.hexagonal.application.core.domain.Customer;
 import br.com.learn.hexagonal.application.ports.in.InsertCustomerInputPort;
 import br.com.learn.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import br.com.learn.hexagonal.application.ports.out.InsertCustomerOutputPort;
 
-public class InsertCustomerUseCase implements InsertCustomerInputPort{
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
 
     private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
     private final InsertCustomerOutputPort insertCustomerOutputPort;
