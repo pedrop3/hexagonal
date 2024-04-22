@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import br.com.learn.hexagonal.adapters.out.FindAddressByZipCodeAdapter;
 import br.com.learn.hexagonal.adapters.out.InsertCustomerAdapter;
+import br.com.learn.hexagonal.adapters.out.SendCpfForValidationAdapter;
 import br.com.learn.hexagonal.application.core.usercase.InsertCustomerUseCase;
 
 @Configuration
@@ -12,8 +13,10 @@ public class InsertCustomerConfig {
 
     @Bean
     public InsertCustomerUseCase insertCustomerUseCase(FindAddressByZipCodeAdapter findAddressByZipCodeAdapter,
-            InsertCustomerAdapter insertCustomerAdapter) {
-        return new InsertCustomerUseCase(findAddressByZipCodeAdapter, insertCustomerAdapter);
+            InsertCustomerAdapter insertCustomerAdapter,
+            SendCpfForValidationAdapter sendCpfForValidationAdapter) {
+        return new InsertCustomerUseCase(findAddressByZipCodeAdapter, insertCustomerAdapter,
+                sendCpfForValidationAdapter);
     }
 
 }
