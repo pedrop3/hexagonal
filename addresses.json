@@ -1,0 +1,113 @@
+{
+  "uuid": "fde47540-4bc5-4fc6-9edd-7f9911721bff",
+  "lastMigration": 32,
+  "name": "Addresses",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8002,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "886be58a-c426-40ba-88f5-3d65924f3f4f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "addresses/38400001",
+      "responses": [
+        {
+          "uuid": "c8bbf357-e5ec-483d-9fab-6d4425c6c608",
+          "body": "{\n    \"street\": \"Rua das Flores\",\n    \"city\": \"São Paulo\",\n    \"state\": \"São Paulo\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3a1b3002-b1aa-47a1-82f4-0f51e217f746",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "addresses/38400000",
+      "responses": [
+        {
+          "uuid": "d5cc9171-5f2f-4117-bc02-df46b8c4aa6d",
+          "body": "{\n  \"street\": \"Rua Hexagonal\",\n  \"city\": \"Uberlândia\",\n  \"state\": \"Minas Gerais\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "886be58a-c426-40ba-88f5-3d65924f3f4f"
+    },
+    {
+      "type": "route",
+      "uuid": "3a1b3002-b1aa-47a1-82f4-0f51e217f746"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
