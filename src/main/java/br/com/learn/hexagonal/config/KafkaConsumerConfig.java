@@ -13,6 +13,8 @@ import br.com.learn.hexagonal.adapters.in.consumer.message.CustomerMessage;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.apache.kafka.clients.consumer.ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG;
 import static org.apache.kafka.clients.consumer.ConsumerConfig.AUTO_OFFSET_RESET_CONFIG;
 import static org.apache.kafka.clients.consumer.ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG;
 import static org.apache.kafka.clients.consumer.ConsumerConfig.GROUP_ID_CONFIG;
@@ -31,6 +33,7 @@ public class KafkaConsumerConfig {
         props.put(KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         props.put(AUTO_OFFSET_RESET_CONFIG, "earliest");
+        props.put(ALLOW_AUTO_CREATE_TOPICS_CONFIG, true);
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(),
                 new JsonDeserializer<>(CustomerMessage.class));
     }

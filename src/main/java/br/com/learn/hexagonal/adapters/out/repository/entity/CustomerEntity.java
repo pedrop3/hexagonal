@@ -10,7 +10,7 @@ import lombok.Data;
  * we are using a specific framework.
  */
 @Data
-@Document(collation = "customers")
+@Document(collection = "customers")
 public class CustomerEntity {
 
     private String id;

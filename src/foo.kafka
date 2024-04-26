@@ -1,0 +1,4 @@
+CONSUMER pedrosantos
+topic: tp-cpf-validation
+partitions: 0
+from: earliest
