@@ -1,6 +1,5 @@
 package br.com.learn.hexagonal.adapters.in.controller.response;
 
-import br.com.learn.hexagonal.adapters.out.client.response.AddressResponse;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AdressResponse {
+public class AddressResponse {
 
     private String street;
     private String city;
