@@ -1,4 +1,4 @@
-package br.com.learn.hexagonal.application.core.usercase;
+package br.com.learn.hexagonal.application.core.usecase;
 
 import br.com.learn.hexagonal.application.ports.in.DeleteCustomerByIdInputPort;
 import br.com.learn.hexagonal.application.ports.in.FindCustomerByIdInputPort;

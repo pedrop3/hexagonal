@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 import br.com.learn.hexagonal.adapters.out.FindAddressByZipCodeAdapter;
 import br.com.learn.hexagonal.adapters.out.UpdateCustomerAdpater;
-import br.com.learn.hexagonal.application.core.usercase.FindCustomerByIdUseCase;
-import br.com.learn.hexagonal.application.core.usercase.UpdateCustomerUseCase;
+import br.com.learn.hexagonal.application.core.usecase.FindCustomerByIdUseCase;
+import br.com.learn.hexagonal.application.core.usecase.UpdateCustomerUseCase;
 
 @Configuration
 public class UpdateCustomerUseCaseConfig {
