@@ -3,7 +3,7 @@ package br.com.learn.hexagonal.adapters.out;
 import org.springframework.stereotype.Component;
 
 import br.com.learn.hexagonal.adapters.out.repository.CustomerRepository;
-import br.com.learn.hexagonal.adapters.out.repository.entity.mapper.CustomerEntityMapper;
+import br.com.learn.hexagonal.adapters.out.repository.mapper.CustomerEntityMapper;
 import br.com.learn.hexagonal.application.core.domain.Customer;
 import br.com.learn.hexagonal.application.ports.out.InsertCustomerOutputPort;
 
