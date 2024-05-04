@@ -1,6 +1,5 @@
-package br.com.learn.hexagonal.adapters.out.repository.entity.mapper;
+package br.com.learn.hexagonal.adapters.out.repository.mapper;
 
-import java.util.Optional;
 
 import org.mapstruct.Mapper;
 

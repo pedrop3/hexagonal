@@ -4,12 +4,12 @@ import br.com.learn.hexagonal.application.ports.in.DeleteCustomerByIdInputPort;
 import br.com.learn.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import br.com.learn.hexagonal.application.ports.out.DeleteCustomerByIdOutputPort;
 
-public class DeleteCustomerByIdUsecCase implements DeleteCustomerByIdInputPort {
+public class DeleteCustomerByIdUseCase implements DeleteCustomerByIdInputPort {
 
     public final DeleteCustomerByIdOutputPort deleteCustomerByIdOutputPort;
     public final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
-    public DeleteCustomerByIdUsecCase(DeleteCustomerByIdOutputPort deleteCustomerByIdOutputPort,
+    public DeleteCustomerByIdUseCase(DeleteCustomerByIdOutputPort deleteCustomerByIdOutputPort,
             FindCustomerByIdInputPort findCustomerByIdInputPort) {
         this.deleteCustomerByIdOutputPort = deleteCustomerByIdOutputPort;
         this.findCustomerByIdInputPort = findCustomerByIdInputPort;

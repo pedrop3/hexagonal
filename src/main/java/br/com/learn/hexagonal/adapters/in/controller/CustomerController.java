@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.learn.hexagonal.adapters.in.controller.mapper.CustomerMapper;
 import br.com.learn.hexagonal.adapters.in.controller.request.CustomerRequest;
 import br.com.learn.hexagonal.adapters.in.controller.response.CustomerResponse;
-import br.com.learn.hexagonal.adapters.out.FindCustomerByIdAdapter;
 import br.com.learn.hexagonal.application.ports.in.DeleteCustomerByIdInputPort;
 import br.com.learn.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import br.com.learn.hexagonal.application.ports.in.InsertCustomerInputPort;
