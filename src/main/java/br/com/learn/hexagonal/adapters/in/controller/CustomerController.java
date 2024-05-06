@@ -7,10 +7,14 @@ import br.com.learn.hexagonal.adapters.in.controller.mapper.CustomerMapper;
 import br.com.learn.hexagonal.adapters.in.controller.request.CustomerRequest;
 import br.com.learn.hexagonal.adapters.in.controller.response.CustomerResponse;
 import br.com.learn.hexagonal.application.ports.in.DeleteCustomerByIdInputPort;
+import br.com.learn.hexagonal.application.ports.in.FindCustomerAllInputPort;
 import br.com.learn.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import br.com.learn.hexagonal.application.ports.in.InsertCustomerInputPort;
 import br.com.learn.hexagonal.application.ports.in.UpdateCustomerInputPort;
 import jakarta.validation.Valid;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,15 +33,18 @@ public class CustomerController {
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
     private final UpdateCustomerInputPort updateCustomerInputPort;
     private final DeleteCustomerByIdInputPort deleteCustomerByIdInputPort;
+    private final FindCustomerAllInputPort findCustomerAllInputPort;
 
     public CustomerController(InsertCustomerInputPort insertCustomerInputPort, CustomerMapper customerMapper,
             FindCustomerByIdInputPort findCustomerByIdInputPort, UpdateCustomerInputPort updateCustomerInputPort,
-            DeleteCustomerByIdInputPort deleteCustomerByIdInputPort) {
+            DeleteCustomerByIdInputPort deleteCustomerByIdInputPort,
+            FindCustomerAllInputPort findCustomerAllInputPort) {
         this.insertCustomerInputPort = insertCustomerInputPort;
         this.customerMapper = customerMapper;
         this.findCustomerByIdInputPort = findCustomerByIdInputPort;
         this.updateCustomerInputPort = updateCustomerInputPort;
         this.deleteCustomerByIdInputPort = deleteCustomerByIdInputPort;
+        this.findCustomerAllInputPort = findCustomerAllInputPort;
     }
 
     @PostMapping
@@ -73,5 +80,15 @@ public class CustomerController {
         deleteCustomerByIdInputPort.delete(id);
 
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping
+    public ResponseEntity<List<CustomerResponse>> all() {
+
+        var customerList = findCustomerAllInputPort.all();
+        var customerListResponse = customerList.stream().map(customerMapper::toCustomerResponse)
+                .collect(Collectors.toList());
+                
+        return ResponseEntity.ok().body(customerListResponse);
     }
 }
